@@ -21,5 +21,5 @@ def main():
         mask[np.triu_indices_from(mask)] = True
         cmap = sns.diverging_palette(240, 10, as_cmap=True)
         sns.heatmap(corr, mask=mask, linewidths=.5, cmap=cmap, center=0, ax=ax2)
-        ax2.set_title("Correlation Matrix")
+        ax2.set_title("Correlation Co-efficient Matrix")
         st.pyplot(fig2)
