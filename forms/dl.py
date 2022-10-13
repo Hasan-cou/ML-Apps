@@ -15,11 +15,12 @@ def main():
         """)
 
     # Upload the dataset and save as csv
-    st.markdown("<h5 style='text-align: center; color: black;'>🗄 Data Source Upload Section:</h5>",
+    st.markdown("<h4 style='text-align: center; color: black;'>🗄 Data Source Upload Section:</h4>",
                 unsafe_allow_html=True)
     st.write("\n")
+    #st.markdown("At First Browse Your Dataset, Then Click Load Data:", unsafe_allow_html=True)
     # Code to read a single file
-    up_file = st.file_uploader(f"🔵Choose a file", type=['csv', 'xlsx'])
+    up_file = st.file_uploader(f"🔵Choose a file ℹ️ Browse Your File, Then Click Load Data", type=['csv', 'xlsx'])
     global data
     if up_file is not None:
         try:
@@ -46,6 +47,6 @@ def main():
         with st.expander("For instruction expand, please:"):
             st.write("""
                 All field names with their data-types are shown here. Is there required to update data-type?
-                To make any correction, please go to metadata visualization.   
+                To make any correction, please go to change metadata option.   
                 . 
             """)

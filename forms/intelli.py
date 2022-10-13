@@ -79,7 +79,7 @@ def main():
             json.dump(params, json_file)
 
         if pred_type == "Regression":
-            st.write(f"5️⃣🔵**Results of Regression Model**🟠")
+            st.write(f"5️⃣🔵**Results of Regression Model**🔵")
 
             # Table to store model and accurcy
             model_r2 = []
