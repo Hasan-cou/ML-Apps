@@ -3,9 +3,6 @@ import pandas as pd
 import os
 import os
 
-import pandas as pd
-import streamlit as st
-
 
 def main():
     st.markdown("<h5 style='text-align: center; color: black;'>🔅Make Change in Your Data🔅</h5>",

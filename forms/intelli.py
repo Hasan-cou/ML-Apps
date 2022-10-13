@@ -75,7 +75,7 @@ def main():
         st.write(f"Number of Testing Data⇾{X_test.shape[0]}")
 
         # Save the model params as a json file
-        with open('data/metadata/model_params.json', 'w') as json_file:
+        with open('data/metadata/mp.json', 'w') as json_file:
             json.dump(params, json_file)
 
         if pred_type == "Regression":
@@ -88,7 +88,7 @@ def main():
             lr_model.fit(X_train, y_train)
             lr_r2 = lr_model.score(X_test, y_test)
             model_r2.append(['Linear Regression', lr_r2])
-            joblib.dump(lr_model, 'data/metadata/model_reg.sav')
+            joblib.dump(lr_model, 'data/metadata/mr.sav')
             # Show results
             results = pd.DataFrame(model_r2, columns=['Models', 'R2 Score']).sort_values(by='R2 Score', ascending=False)
             st.dataframe(results)
@@ -100,6 +100,6 @@ def main():
             lc_model.fit(X_train, y_train)
             lc_acc = lc_model.score(X_test, y_test)
             model_acc.append(['Linear Regression', lc_acc])
-            joblib.dump(lc_model, 'data/metadata/model_classification.sav')
+            joblib.dump(lc_model, 'data/metadata/mc.sav')
             res = pd.DataFrame(model_acc, columns=['Models', 'Accuracy']).sort_values(by='Accuracy', ascending=False)
             st.dataframe(res)
