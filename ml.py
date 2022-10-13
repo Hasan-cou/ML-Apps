@@ -32,7 +32,7 @@ upload, analyze, learning, visualization, explanation = st.tabs(
 # Add all my application pages here
 ml.connect("📨 Upload Data", dl.main)
 ml.connect("✅ Change Metadata", du.main)
-ml.connect("⚙️ Machine Learning", intelli.main)
+ml.connect("⚙️ Linear Regression", intelli.main)
 ml.connect("📊 Data Analysis", dv.main)
 ml.connect("📉 Optimization and Evaluation", evaluation.main)
 
