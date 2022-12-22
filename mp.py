@@ -20,6 +20,7 @@ class MP:
         )
 
     def start(self):
+
         st.sidebar.image('Logo.png')
         page = st.sidebar.selectbox(
             '💎 System Navigation here⤵️::💎',
